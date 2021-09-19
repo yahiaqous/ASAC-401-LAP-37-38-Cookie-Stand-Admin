@@ -84,6 +84,9 @@ Your job is to continue work on `Cookie Stand Admin` app using [Next.js](https:/
 
 &nbsp;
 
+**Deployment Link**: <https://cookie-stand-admin-o40dk8qoa-snacks.vercel.app/>
+
+&nbsp;
 &nbsp;
 
 &nbsp;

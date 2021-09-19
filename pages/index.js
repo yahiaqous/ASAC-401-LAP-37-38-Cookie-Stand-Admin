@@ -8,6 +8,7 @@ import { hours } from '../components/data';
 
 export default function CookieStandAdmin() {
   const [data, setData] = useState([]);
+
   function onCreate(event) {
     event.preventDefault();
     const answeredQuestion = {
@@ -18,7 +19,7 @@ export default function CookieStandAdmin() {
       hourly_sales: [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36],
       totals: calculateTotal(),
     };
-    calculateHourlyTotals();
+
     setData((answers) => [...answers, answeredQuestion]);
   }
 
@@ -30,6 +31,10 @@ export default function CookieStandAdmin() {
     }
     return total;
   }
+
+  useEffect(() => {
+    calculateHourlyTotals();
+  }, [data]);
 
   const [totals, setTotals] = useState([]);
   function calculateHourlyTotals() {
